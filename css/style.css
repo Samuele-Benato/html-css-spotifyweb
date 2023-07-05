@@ -18,6 +18,8 @@ body {
   font-family: "Inter", sans-serif;
   font-family: "Montserrat", sans-serif;
   font-family: "Poppins", sans-serif;
+
+  color: white;
 }
 img {
   max-width: 100%;
@@ -46,52 +48,8 @@ li {
   margin: 0 -1rem;
 }
 
-.col-1 {
-  width: calc((100% / 12) * 1);
-}
-
-.col-2 {
-  width: calc((100% / 12) * 2);
-}
-
-.col-3 {
-  width: calc((100% / 12) * 3);
-}
-
-.col-4 {
-  width: calc((100% / 12) * 4);
-}
-
-.col-5 {
-  width: calc((100% / 12) * 5);
-}
-
-.col-6 {
-  width: calc((100% / 12) * 6);
-}
-
-.col-7 {
-  width: calc((100% / 12) * 7);
-}
-
-.col-8 {
-  width: calc((100% / 12) * 8);
-}
-
-.col-9 {
-  width: calc((100% / 12) * 9);
-}
-
-.col-10 {
-  width: calc((100% / 12) * 10);
-}
-
-.col-11 {
-  width: calc((100% / 12) * 11);
-}
-
-.col-12 {
-  width: calc((100% / 12) * 12);
+.col {
+  padding: 1rem;
 }
 
 /* ######## MAIN ########  */
@@ -132,7 +90,12 @@ header {
   background: var(--footer);
 }
 
-#footer .row {
+#footer img {
+  height: 80px;
+  width: 80px;
+}
+
+#footer .footer-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -140,16 +103,32 @@ header {
   height: 150px;
 }
 
-#footer .col,
+#footer .footer-left,
+#footer .footer-center,
+#footer .footer-right,
 #footer .footer-center-top > ul {
   display: flex;
   align-items: center;
-  justify-content: center;
+  padding: 0 1rem;
 }
 
-#footer img {
-  height: 80px;
-  width: 80px;
+#footer .footer-left,
+#footer .footer-right {
+  flex-basis: 15%;
+}
+
+#footer .footer-left {
+  gap: 0 1rem;
+}
+
+#footer .footer-right {
+  justify-content: flex-end;
+  gap: 0 1rem;
+}
+
+#footer .footer-center {
+  flex-direction: column;
+  flex-basis: 60%;
 }
 
 .footer-center-top a {
@@ -160,7 +139,26 @@ header {
 
 .footer-center-bottom {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+
+  padding: 1rem 0;
+  gap: 0 30px;
+}
+
+.progress-bar {
+  height: 5px;
+  width: 100%;
+
+  background: gray;
+}
+
+.inside-progress-bar {
+  height: 5px;
+  width: 40%;
+
+  background: lightgray;
 }
 
 #footer .f-play {
