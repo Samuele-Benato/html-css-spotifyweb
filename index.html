@@ -30,20 +30,22 @@
     <main id="main" class="flex">
         <!-- SIDEBAR -->
       <div id="sidebar">
+        <!-- LOGO -->
         <div class="logo">
             <img src="./spotify/img/logo.svg" alt="logo word">
         </div>
+        <!-- ICONS -->
         <div>
-            <ul>
-                <li><img src="./spotify/img/home.svg" alt="Home">Home</li>
-                <li><img src="./spotify/img/search.svg" alt="Serch">Cerca</li>
-                <li><img src="./spotify/img/libreria.svg" alt="">La tua libreria</li>
+            <ul class="header-icons">
+                <li ><img src="./spotify/img/home.svg" alt="Home"><span>Home</span></li>
+                <li><img src="./spotify/img/search.svg" alt="Serch"><span>Cerca</span></li>
+                <li><img src="./spotify/img/libreria.svg" alt="library"><span>La tua libreria</span></li>
             </ul>
         </div>
-
+        <!-- CREATE PLAYLIST -->
         <div class="create-playlist">
             <h3>PLAYLIST</h3>
-            <i class="fa-regular fa-square-plus">  Crea Playlist</i>
+            <i class="fa-regular fa-square-plus"></i><span> Crea Playlist</span>
             <ul>
                 <li>Playlist Lazza</li>
                 <li>Playlist Salmo</li>
@@ -62,6 +64,15 @@
                 <li>Playlist Achille Lauro</li>
                 <li>Playlist John Cena</li>
             </ul>
+        </div>
+
+        <div >
+            <i class="fa-regular fa-circle-down install-app"></i>
+            <span class="install-app"> Installa app</span>
+            <div class="account">
+                <i class="fa-solid fa-circle-user "></i>
+                <span> Samuele Benato</span>
+            </div>
         </div>
         
       </div>
@@ -207,6 +218,41 @@
                 </div>
             </div>
         </section>
+        <!-- POPULAR ARTIST -->
+        <section id="popular-artist">
+            <div class="container">
+                <h2>Artisti più popolari</h2>
+                <h4>Più ascolti, più accurati saranno i suggerimenti.</h4>
+                <div class="row">
+                    <!-- CARD 1/6 -->
+                    <div class="col">
+                        <div class="card">
+                            <div>
+                                <img src="./spotify/img/player_left.jpg" alt="player left">
+                            </div>
+                            <div>
+                                <h3>Hilltop Hoods</h3>
+                                <h4>Musica Classica</h4>
+                            </div>
+                        </div>       
+                    </div>
+
+                       <!-- CARD 2/6 -->
+                    <div class="col">
+                        <div class="card">
+                            <div>
+                                <img src="./spotify/img/einaudi.jpeg">
+                            </div>
+                            <div>
+                                <h3>Einaudi</h3>
+                                <h4>Trap Italiana</h4>
+                            </div>
+                        </div>           
+                    </div>
+
+                </div>
+            </div>
+        </section>
 
       </div>
     </main>
@@ -218,7 +264,7 @@
                 <div>
                     <img src="./spotify/img/sinister.jpeg" alt="Sinister film horror">
                 </div>
-                <div>
+                <div class="footer-song-name">
                     <h4>Sinister</h4>
                     <h5>Song Name</h5>
                 </div>
@@ -240,7 +286,7 @@
                 <!-- FOOTER CENTER BOTTOM -->
                 <div class="flex footer-center-bottom">
                     <div>0.25</div>
-                    <div class="progress-bar">
+                    <div class="progress-bar-center">
                         <div class="inside-progress-bar"></div>
                     </div>
                     <div>4:35</div>
@@ -250,7 +296,7 @@
                 <div><i class="fa-solid fa-list"></i></div>
                 <div><i class="fa-solid fa-display"></i></div>
                 <div><i class="fa-solid fa-volume-high"></i></div>
-                <div class="progress-bar">
+                <div class="progress-bar-right">
                     <div class="inside-progress-bar"></div>
                 </div>
         </div>           

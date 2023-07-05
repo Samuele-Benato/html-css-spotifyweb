@@ -42,11 +42,15 @@ section {
 section h3 {
   font-size: 1rem;
   font-weight: 900;
+  line-height: 1.1rem;
+  padding-bottom: 0.5rem;
 }
 
 section h4 {
   font-size: 0.5;
   font-weight: 900;
+  line-height: 1rem;
+  padding-bottom: 1.5rem;
   color: var(--gray-words);
 }
 
@@ -62,7 +66,7 @@ section .card {
   align-items: center;
 }
 
-/* CONTAINER-ROW-COL */
+/* CONTAINER-ROW-COL-CARD*/
 
 .container {
   margin: 0 auto;
@@ -77,6 +81,14 @@ section .card {
 
 .col {
   padding: 1rem;
+}
+
+section .container .row .col {
+  width: calc(100% / 6);
+}
+
+.card {
+  min-width: 120px;
 }
 
 /* ######## MAIN ########  */
@@ -114,6 +126,24 @@ section .card {
 
 .create-playlist * {
   padding: 0.5rem 0;
+}
+
+.install-app {
+  padding: 0.75rem 0.5rem 0.5rem 0;
+  color: var(--gray-words);
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.account {
+  padding: 0.5rem 0;
+  border-top: 1px solid var(--gray-words);
+}
+
+.account span {
+  font-size: 1rem;
+  color: white;
+  padding-left: 5px;
 }
 
 /* ######## MAIN CONTENT ######## */
@@ -164,21 +194,19 @@ header {
   font-weight: bolder;
 
   justify-content: center;
+  flex-wrap: wrap;
   gap: 2%;
 
   padding-bottom: 1.5rem;
 }
 
-/* RECENTLY PLAYED SECTION */
-#recently-played .col {
-  width: calc(100% / 6);
-}
+/* POPULAR ARTIST */
 
-/* CREATE FOR SECTION */
-#create-for .col {
-  width: calc(100% / 6);
+#popular-artist .card img {
+  border-radius: 50%;
+  border: 1px solid var(--footer);
+  box-shadow: 2px 2px 2px 2px var(--footer);
 }
-
 /* ######## FOOTER ######## */
 #footer {
   height: 120px;
@@ -204,7 +232,7 @@ header {
 
 #footer .footer-left,
 #footer .footer-right {
-  flex-basis: 20%;
+  flex-basis: 30%;
 }
 
 #footer .footer-left {
@@ -215,14 +243,29 @@ header {
   height: 60px;
   width: 60px;
 }
+
+.footer-left i {
+  color: var(--gray-words);
+  font-size: 1.25rem;
+}
+
+.footer-song-name {
+  margin-right: 20px;
+}
+
 #footer .footer-right {
   justify-content: flex-end;
   gap: 0 1rem;
 }
 
+.footer-right i {
+  font-size: 1.25rem;
+  padding-left: 0.5rem;
+}
+
 #footer .footer-center {
   flex-direction: column;
-  flex-basis: 50%;
+  flex-basis: 40%;
 }
 
 .footer-center-top a {
@@ -252,9 +295,16 @@ header {
   gap: 0 30px;
 }
 
-.progress-bar {
+.progress-bar-center {
   height: 5px;
   width: 100%;
+
+  background: gray;
+}
+
+.progress-bar-right {
+  height: 5px;
+  width: 40%;
 
   background: gray;
 }
