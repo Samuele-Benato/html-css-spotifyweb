@@ -21,11 +21,18 @@ body {
 
   color: white;
 }
+
 img {
   max-width: 100%;
 }
+
 li {
   list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--gray-words);
 }
 
 /* FLEX */
@@ -54,7 +61,7 @@ li {
 
 /* ######## MAIN ########  */
 #main {
-  height: calc(100vh - 150px);
+  height: calc(100vh - 100px);
   background: var(--main);
 }
 
@@ -63,11 +70,36 @@ li {
   height: 100%;
   width: 250px;
   background: black;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2%;
+
+  font-size: 1rem;
+  padding: 0 1.5rem;
+}
+
+#sidebar li img {
+  width: 30px;
+}
+
+.logo {
+  width: 80%;
+  padding: 1.5rem 0;
+}
+
+.create-playlist {
+  overflow-y: auto;
+}
+
+.create-playlist * {
+  padding: 0.5rem 0;
 }
 
 /* ######## MAIN CONTENT ######## */
 #main-content {
   width: calc(100% - 250px);
+  padding-top: 140px;
 }
 
 /* HEADER */
@@ -84,15 +116,41 @@ header {
   background: var(--header);
 }
 
-/* ######## FOOTER ######## */
-#footer {
-  height: 150px;
-  background: var(--footer);
+.upgrade {
+  height: 100%;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-#footer img {
-  height: 80px;
-  width: 80px;
+.upgrade input {
+  background: transparent;
+  color: white;
+
+  font-size: 0.75rem;
+
+  padding: 15px 40px;
+  margin: 0 10px;
+
+  border: 3px solid white;
+  border-radius: 30px;
+}
+
+/* CATEGORIES */
+
+.categories ul {
+  font-size: 0.75rem;
+  font-weight: bolder;
+
+  justify-content: center;
+  gap: 2%;
+}
+
+/* RECENTLY PLAYED SECTION */
+
+/* ######## FOOTER ######## */
+#footer {
+  height: 100px;
+  background: var(--footer);
 }
 
 #footer .footer-container {
@@ -100,7 +158,7 @@ header {
   align-items: center;
   justify-content: space-between;
 
-  height: 150px;
+  height: 100px;
 }
 
 #footer .footer-left,
@@ -114,13 +172,17 @@ header {
 
 #footer .footer-left,
 #footer .footer-right {
-  flex-basis: 15%;
+  flex-basis: 20%;
 }
 
 #footer .footer-left {
   gap: 0 1rem;
 }
 
+.footer-left img {
+  height: 60px;
+  width: 60px;
+}
 #footer .footer-right {
   justify-content: flex-end;
   gap: 0 1rem;
@@ -128,13 +190,21 @@ header {
 
 #footer .footer-center {
   flex-direction: column;
-  flex-basis: 60%;
+  flex-basis: 50%;
 }
 
 .footer-center-top a {
   color: white;
-  font-size: 1.5rem;
-  padding: 0 25px;
+  font-size: 1rem;
+  padding: 0 20px;
+}
+
+.footer-center-top {
+  padding-top: 20px;
+}
+
+#footer .f-play {
+  font-size: 2rem;
 }
 
 .footer-center-bottom {
@@ -143,7 +213,10 @@ header {
 
   width: 100%;
 
-  padding: 1rem 0;
+  font-size: 0.75rem;
+  font-weight: bold;
+
+  padding: 0.75rem 0;
   gap: 0 30px;
 }
 
@@ -159,8 +232,4 @@ header {
   width: 40%;
 
   background: lightgray;
-}
-
-#footer .f-play {
-  font-size: 2.75rem;
 }
