@@ -36,6 +36,9 @@ a {
 }
 
 /* SECTIONS */
+section {
+  padding: 1rem 0;
+}
 section h3 {
   font-size: 1rem;
   font-weight: 900;
@@ -69,6 +72,7 @@ section .card {
 
 .row {
   margin: 0 -1rem;
+  display: flex;
 }
 
 .col {
@@ -167,6 +171,11 @@ header {
 
 /* RECENTLY PLAYED SECTION */
 #recently-played .col {
+  width: calc(100% / 6);
+}
+
+/* CREATE FOR SECTION */
+#create-for .col {
   width: calc(100% / 6);
 }
 
