@@ -28,6 +28,7 @@
   gap: 2%;
 
   font-size: 1rem;
+
   padding: 0 1.5rem;
 }
 
@@ -71,7 +72,7 @@ body {
   font-family: "Montserrat", sans-serif;
   font-family: "Poppins", sans-serif;
 
-  color: white;
+  color: #d2d2d2;
 }
 
 img {
@@ -494,5 +495,162 @@ section .card {
 
   .inside-progress-bar {
     height: 4px;
+  }
+}
+
+/* SPOTIFY-MD-RESPONSIVE */
+@media screen and (max-width: 639px) {
+  /* ######## SETTINGS LAYOUT ########  */
+  #main {
+    height: calc(100vh - 100px);
+  }
+
+  #sidebar {
+    font-size: 0.9rem;
+    padding: 0 1.3rem;
+  }
+
+  #main-content {
+    padding-top: 120px;
+  }
+
+  header {
+    height: 100px;
+  }
+
+  #footer {
+    height: 100px;
+  }
+
+  #footer .footer-container {
+    height: 100px;
+  }
+
+  /* SECTIONS */
+
+  section h3 {
+    font-size: 0.4;
+    line-height: 0.9rem;
+    padding-bottom: 0.4rem;
+  }
+
+  section h4 {
+    font-size: 0.4;
+    line-height: 0.7rem;
+    padding-bottom: 1.25rem;
+  }
+
+  /* CONTAINER-ROW-COL-CARD*/
+
+  .container {
+    padding: 0 0.7rem;
+  }
+
+  .row {
+    margin: 0 -0.7rem;
+    flex-wrap: wrap;
+  }
+
+  .col {
+    padding: 0.7rem;
+  }
+
+  section .container .row .col {
+    width: calc(100% / 2);
+  }
+
+  /* CATEGORIES */
+
+  .categories ul {
+    font-size: 0.9rem;
+    gap: 10%;
+  }
+
+  /* ######## FOOTER ######## */
+
+  #footer .footer-left,
+  #footer .footer-center,
+  #footer .footer-right,
+  #footer .footer-center-top > ul {
+    padding: 0 1.25rem;
+  }
+
+  #footer .footer-left,
+  #footer .footer-right {
+    flex-basis: 30%;
+  }
+
+  /* FOOTER LEFT */
+
+  #footer .footer-left {
+    gap: 0 0.75rem;
+  }
+
+  .footer-left img {
+    height: 30px;
+    width: 30px;
+  }
+
+  .footer-left i {
+    color: var(--gray-words);
+    font-size: 0.7rem;
+  }
+
+  /* FOOTER RIGHT */
+
+  #footer .footer-right {
+    justify-content: flex-end;
+    gap: 0 0.75rem;
+  }
+
+  .footer-right i {
+    font-size: 0.8rem;
+    padding-left: 0.5rem;
+  }
+
+  .footer-song-name h4 {
+    font-size: 0.75rem;
+  }
+
+  .footer-song-name h5 {
+    font-size: 0.5rem;
+  }
+
+  /* FOOTER CENTER */
+
+  #footer .footer-center {
+    flex-direction: column;
+    flex-basis: 50%;
+  }
+
+  /* FOOTER CENTER-TOP */
+
+  .footer-center-top a {
+    color: white;
+    font-size: 0.75rem;
+    padding: 0 10px;
+  }
+
+  #footer .f-play {
+    font-size: 1.5rem;
+  }
+
+  /* FOOTER CENTER-BOTTOM */
+
+  .footer-center-bottom {
+    font-size: 0.5rem;
+  }
+
+  .progress-bar-center {
+    height: 3px;
+  }
+
+  .progress-bar-right {
+    height: 3px;
+    width: 80%;
+  }
+
+  .inside-progress-bar {
+    height: 3px;
   }
 }
