@@ -32,21 +32,22 @@
       <div id="sidebar">
         <!-- LOGO -->
         <div class="logo">
-            <img src="./spotify/img/logo.svg" alt="logo word">
+            <img class="logo-big" src="./spotify/img/logo.svg" alt="logo word">
+            <img class="logo-small" src="./spotify/img/logo-small.svg" alt="logo small">
         </div>
         <!-- ICONS -->
         <div>
-            <ul class="header-icons">
-                <li ><img src="./spotify/img/home.svg" alt="Home"><span>Home</span></li>
-                <li><img src="./spotify/img/search.svg" alt="Serch"><span>Cerca</span></li>
-                <li><img src="./spotify/img/libreria.svg" alt="library"><span>La tua libreria</span></li>
+            <ul class="sidebar-icons">
+                <li class="flex"><img src="./spotify/img/home.svg" alt="Home"><div>Home</div></li>
+                <li class="flex"><img src="./spotify/img/search.svg" alt="Serch"><div>Cerca</div></li>
+                <li class="flex"><img src="./spotify/img/libreria.svg" alt="library"><div>La tua libreria</div></li>
             </ul>
         </div>
         <!-- CREATE PLAYLIST -->
         <div class="create-playlist">
             <h3>PLAYLIST</h3>
             <i class="fa-regular fa-square-plus"></i><span> Crea Playlist</span>
-            <ul>
+            <ul class="playlist-names">
                 <li>Playlist Lazza</li>
                 <li>Playlist Salmo</li>
                 <li>Playlist Luchè</li>
@@ -66,8 +67,8 @@
             </ul>
         </div>
 
-        <div >
-            <i class="fa-regular fa-circle-down install-app"></i>
+        <div class="install-account">
+            <i class="fa-regular fa-circle-down install-icon"></i>
             <span class="install-app"> Installa app</span>
             <div class="account">
                 <i class="fa-solid fa-circle-user "></i>
@@ -268,8 +269,8 @@
                     <h4>Sinister</h4>
                     <h5>Song Name</h5>
                 </div>
-                <div><i class="fa-regular fa-heart"></i></div>
-                <div><i class="fa-solid fa-folder"></i></div>
+                <div class="fa-left"><i class="fa-regular fa-heart"></i>
+                <i class="fa-solid fa-folder"></i></div>
             </div>
             <!-- FOOTER CENTER -->
             <div class="footer-center">
