@@ -12,6 +12,58 @@
   padding: 0;
 }
 
+/* ######## SETTINGS LAYOUT ########  */
+#main {
+  height: calc(100vh - 120px);
+  background: var(--main);
+}
+
+#sidebar {
+  height: 100%;
+  width: 250px;
+  background: black;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2%;
+
+  font-size: 1rem;
+  padding: 0 1.5rem;
+}
+
+#main-content {
+  width: calc(100% - 250px);
+  padding-top: 140px;
+
+  overflow-y: auto;
+}
+
+header {
+  height: 120px;
+  width: calc(100% - 250px);
+
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  z-index: 1;
+
+  background: var(--header);
+}
+
+#footer {
+  height: 120px;
+  background: var(--footer);
+}
+
+#footer .footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 120px;
+}
+
 /* GENERAL */
 body {
   font-family: "Alkatra", cursive;
@@ -33,6 +85,31 @@ li {
 a {
   text-decoration: none;
   color: var(--gray-words);
+}
+
+/* CONTAINER-ROW-COL-CARD*/
+
+.container {
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0 1rem;
+}
+
+.row {
+  margin: 0 -1rem;
+  display: flex;
+}
+
+.col {
+  padding: 1rem;
+}
+
+section .container .row .col {
+  width: calc(100% / 6);
+}
+
+.card {
+  min-width: 120px;
 }
 
 /* SECTIONS */
@@ -62,54 +139,8 @@ section .card {
 .flex {
   display: flex;
 }
-.align-items {
-  align-items: center;
-}
-
-/* CONTAINER-ROW-COL-CARD*/
-
-.container {
-  margin: 0 auto;
-  max-width: 100%;
-  padding: 0 1rem;
-}
-
-.row {
-  margin: 0 -1rem;
-  display: flex;
-}
-
-.col {
-  padding: 1rem;
-}
-
-section .container .row .col {
-  width: calc(100% / 6);
-}
-
-.card {
-  min-width: 120px;
-}
-
-/* ######## MAIN ########  */
-#main {
-  height: calc(100vh - 120px);
-  background: var(--main);
-}
 
 /* ######## SIDEBAR ######## */
-#sidebar {
-  height: 100%;
-  width: 250px;
-  background: black;
-
-  display: flex;
-  flex-direction: column;
-  gap: 2%;
-
-  font-size: 1rem;
-  padding: 0 1.5rem;
-}
 
 #sidebar li img {
   width: 30px;
@@ -147,26 +178,8 @@ section .container .row .col {
 }
 
 /* ######## MAIN CONTENT ######## */
-#main-content {
-  width: calc(100% - 250px);
-  padding-top: 140px;
-
-  overflow-y: auto;
-}
 
 /* HEADER */
-header {
-  height: 120px;
-  width: calc(100% - 250px);
-
-  position: fixed;
-  top: 0;
-  right: 0;
-
-  z-index: 1;
-
-  background: var(--header);
-}
 
 .upgrade {
   height: 100%;
@@ -197,7 +210,11 @@ header {
   flex-wrap: wrap;
   gap: 2%;
 
-  padding-bottom: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.categories ul li {
+  padding-bottom: 1rem;
 }
 
 /* POPULAR ARTIST */
@@ -208,18 +225,6 @@ header {
   box-shadow: 2px 2px 2px 2px var(--footer);
 }
 /* ######## FOOTER ######## */
-#footer {
-  height: 120px;
-  background: var(--footer);
-}
-
-#footer .footer-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  height: 120px;
-}
 
 #footer .footer-left,
 #footer .footer-center,
@@ -235,6 +240,8 @@ header {
   flex-basis: 30%;
 }
 
+/* FOOTER LEFT */
+
 #footer .footer-left {
   gap: 0 1rem;
 }
@@ -249,9 +256,17 @@ header {
   font-size: 1.25rem;
 }
 
-.footer-song-name {
-  margin-right: 20px;
+.footer-song-name h4 {
+  font-size: 1rem;
 }
+
+.footer-song-name h5 {
+  margin-right: 20px;
+  font-size: 0.75rem;
+  color: var(--gray-words);
+}
+
+/* FOOTER RIGHT */
 
 #footer .footer-right {
   justify-content: flex-end;
@@ -263,10 +278,14 @@ header {
   padding-left: 0.5rem;
 }
 
+/* FOOTER CENTER */
+
 #footer .footer-center {
   flex-direction: column;
   flex-basis: 40%;
 }
+
+/* FOOTER CENTER TOP*/
 
 .footer-center-top a {
   color: white;
@@ -281,6 +300,8 @@ header {
 #footer .f-play {
   font-size: 2rem;
 }
+
+/* FOOTER CENTER BOTTOM*/
 
 .footer-center-bottom {
   display: flex;
@@ -314,4 +335,164 @@ header {
   width: 40%;
 
   background: lightgray;
+}
+
+/* SPOTIFY-MD-RESPONSIVE */
+@media screen and (max-width: 878px) {
+  /* ######## SETTINGS LAYOUT ########  */
+  #main {
+    height: calc(100vh - 100px);
+  }
+
+  #sidebar {
+    font-size: 0.9rem;
+    padding: 0 1.3rem;
+  }
+
+  #main-content {
+    padding-top: 120px;
+  }
+
+  header {
+    height: 100px;
+  }
+
+  #footer {
+    height: 100px;
+  }
+
+  #footer .footer-container {
+    height: 100px;
+  }
+
+  /* SECTIONS */
+  section {
+    padding: 0.75rem 0;
+  }
+
+  section h3 {
+    font-size: 0.75;
+    line-height: 1rem;
+    padding-bottom: 0.5rem;
+  }
+
+  section h4 {
+    font-size: 0.5;
+    line-height: 0.75rem;
+    padding-bottom: 1.5rem;
+  }
+
+  /* CONTAINER-ROW-COL-CARD*/
+
+  .container {
+    padding: 0 0.75rem;
+  }
+
+  .row {
+    margin: 0 -0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .col {
+    padding: 0.75rem;
+  }
+
+  section .container .row .col {
+    width: calc(100% / 4);
+  }
+
+  /* CATEGORIES */
+
+  .categories ul {
+    font-size: 1rem;
+    gap: 4%;
+  }
+
+  /* ######## FOOTER ######## */
+
+  #footer .footer-left,
+  #footer .footer-center,
+  #footer .footer-right,
+  #footer .footer-center-top > ul {
+    padding: 0 1.25rem;
+  }
+
+  #footer .footer-left,
+  #footer .footer-right {
+    flex-basis: 30%;
+  }
+
+  /* FOOTER LEFT */
+
+  #footer .footer-left {
+    gap: 0 1rem;
+  }
+
+  .footer-left img {
+    height: 40px;
+    width: 40px;
+  }
+
+  .footer-left i {
+    color: var(--gray-words);
+    font-size: 1rem;
+  }
+
+  /* FOOTER RIGHT */
+
+  #footer .footer-right {
+    justify-content: flex-end;
+    gap: 0 0.75rem;
+  }
+
+  .footer-right i {
+    font-size: 0.8rem;
+    padding-left: 0.5rem;
+  }
+
+  .footer-song-name h4 {
+    font-size: 0.75rem;
+  }
+
+  .footer-song-name h5 {
+    font-size: 0.5rem;
+  }
+
+  /* FOOTER CENTER */
+
+  #footer .footer-center {
+    flex-direction: column;
+    flex-basis: 50%;
+  }
+
+  /* FOOTER CENTER-TOP */
+
+  .footer-center-top a {
+    color: white;
+    font-size: 0.9rem;
+    padding: 0 15px;
+  }
+
+  #footer .f-play {
+    font-size: 1.75rem;
+  }
+
+  /* FOOTER CENTER-BOTTOM */
+
+  .footer-center-bottom {
+    font-size: 0.7rem;
+  }
+
+  .progress-bar-center {
+    height: 4px;
+  }
+
+  .progress-bar-right {
+    height: 4px;
+    width: 60%;
+  }
+
+  .inside-progress-bar {
+    height: 4px;
+  }
 }
